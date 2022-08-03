@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8cbc109b9d.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #navbarSection {
+            background-color: #292A2E;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navbar1stSection {
+            position: relative;
+            left: 50px;
+        }
+
+        #navbar2ndSection {
+            position: relative;
+            right: 50px;
+        }
+
+        i {
+            font-size: 20px;
+            color: white;
+            padding: 0 10px 0 10px;
+            cursor: pointer;
+        }
+
+        #armaniUrl {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .navbarText {
+            display: inline-block;
+            padding: 0 10px 0 0px;
+            color: rgb(255, 0, 0);
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .navbardp {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navbardp:hover .navbardpcontent {
+            display: block;
+        }
+
+        .navbardpcontent {
+            display: none;
+            position: absolute;
+            text-align: center;
+            left: -150px;
+            min-width: 360px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            box-shadow: 2px 2px 2px black;
+            transition: all 1s linear;
+        }
+
+        .navbarBtn {
+            display: inline-block;
+            padding: 10px 10px 10px 10px;
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            transition: all 0.5s linear;
+        }
+
+        .navbarBtn:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .secondnavbarSection {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="navbarSection">
+        <div id="navbar1stSection">
+            <i class="fa-solid fa-bars"></i>
+            <a id="armaniUrl" href="#">ARMANI.COM</a>
+        </div>
+        <div id="navbar2ndSection">
+            <div class="navbardp">
+                <p class="navbarText">My Account</p>
+                <div class="navbardpcontent">
+                    <h6 style="font-size: 0.8rem;">Registered User</h6>
+                    <p style="font-size: 0.8rem;margin-top: -10px;">Log in to go to my account</p>
+                    <p class="navbarBtn" style="font-size: 0.8rem;">Log In</p>
+                    <h6 style="font-size: 0.8rem;">New User</h6>
+                    <p style="font-size: 0.8rem;margin-top: -10px;">Register now and make the most of My Account.</p>
+                    <p style="font-size: 0.8rem;margin-top: -10px;" font-size: 0.8rem;" class="navbarBtn">Register</p>
+                </div>
+            </div>
+            <div class="navbardp">
+                <p class="navbarText">Contact Us</p>
+                <div class="navbardpcontent">
+                    <h6 style="font-size: 0.8rem;">May we help you?</h6>
+                    <p style="font-size: 0.8rem;">We are available Monday to Friday, from 9 am to 11 pm EST, excluding
+                        holidays.</p>
+                    <h6 style="font-size: 0.8rem;text-align: left;margin-left:5px;">Online Purchases </h6>
+                    <h6 style="font-size: 0.8rem;text-align:left;"><i style="color: black;"
+                            class="fa-solid fa-phone"></i>Call Us<span
+                            style="display: flex;justify-content: right;margin-top: -20px;text-decoration: underline;">77902338</span></h6>
+                    <h6 style="font-size: 0.8rem;text-align: left;margin-left:5px;">Retail Order</h6>
+                    <h6 style="font-size: 0.8rem;text-align:left;">
+                        <i style="color: black;text-align: left;" class="fa-solid fa-envelope"></i>
+                        Write us<span style="display: flex;justify-content: right;margin-top: -20px;text-decoration: underline;">Sent Your
+                            Request</span>
+                    </h6>
+                    <h6 style="font-size: 0.8rem;">Contact Us</h6>
+                    <p style="font-size: 0.7rem;"><span style="text-decoration: underline;">Find your area of interest</span> to receive assistance for your purchases or to find the information you are looking for.</p>
+
+                </div>
+            </div>
+            <div class="navbardp">
+                <p class="navbarText">Store Locator</p>
+            </div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-briefcase"></i>
+        </div>
+    </section>
+
+    <section class="secondnavbarSection">
+        <img style="width: 300px;transform: translate(50%,0);" src="http://www.luxottica.com/sites/luxottica.com/files/styles/brand_breakpoints_theme_luxottica13rwd_thr1366_1x/public/brand/mainimage/emporio_armani.png">
+    </section>
+
+</body>
+
+</html>

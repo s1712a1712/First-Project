@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/8cbc109b9d.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100;700&family=Audiowide&family=Changa:wght@200&family=Kdam+Thmor+Pro&family=The+Nautigal:wght@700&display=swap"
+          rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100;700&family=Audiowide&family=Changa:wght@200&family=Kdam+Thmor+Pro&family=Lobster&family=The+Nautigal:wght@700&display=swap"
+          rel="stylesheet">
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background-color: #111111;
+          }
+
+          .bannerContainer {
+               display: flex;
+               justify-content: space-around;
+               background-color: black;
+          }
+
+          .bannerimgContainer {
+               width: 15%;
+               height: 95px;
+               margin-left: 50px;
+          }
+
+          .bannerImg {
+               width: 100px;
+          }
+
+          .navUl {
+               display: flex;
+               justify-content: space-around;
+               width: 100%;
+               margin-left: -40px;
+          }
+
+          .navLi {
+               font-family: 'Changa', sans-serif;
+               font-size: 14px;
+               color: rgb(255, 0, 0);
+               padding: 15px 10px 15px 10px;
+               list-style-type: none;
+               transition: all 1s ease;
+          }
+
+          .navLi:hover {
+               margin-top: -10px;
+               cursor: pointer;
+               border-bottom: 1px solid red;
+          }
+
+          .bannericonContainer {
+               margin-left: 250px;
+               margin-top: -20px;
+          }
+
+          .bannerIcon {
+               width: 70px;
+               transition: transform 1s ease, box-shadow 2s ease;
+          }
+
+          .bannerIcon:hover {
+               transform: rotate(360deg);
+               cursor: pointer;
+               box-shadow: 2px 2px 2px red;
+          }
+
+          .inputContainer {
+               width: 160px;
+               margin-top: 5px;
+               margin-left: -30px;
+          }
+
+          input[type="text"] {
+               opacity: 1;
+               width: 85px;
+               transition: all 1s ease;
+               background-color: black;
+               color: red;
+               box-shadow: 2px 2px 2px red;
+          }
+
+          input[type="text"]:focus {
+               width: 130px;
+               font-size: 12px;
+          }
+
+          input[type="text"]::placeholder {
+               font-size: 9px;
+               color: red;
+          }
+
+          input[type="text"]:placeholder:focus {
+               font-size: 12px;
+          }
+
+          .dropdownLabel {
+               display: inline-block;
+               width: 20px;
+               margin-left: -5px;
+               position: relative;
+          }
+
+          #i {
+               color: rgb(255, 0, 0);
+          }
+
+          .zephyrusText {
+               font-size: 30px;
+               font-family: 'Changa', sans-serif;
+               color: transparent;
+               text-align: left;
+               animation: effect 1s linear infinite;
+               margin-left: 30px;
+          }
+
+          @keyframes effect {
+               0% {
+                    background: linear-gradient(#ff0000, #ff0000);
+                    -webkit-background-clip: text;
+               }
+
+               25% {
+                    background: linear-gradient(#ff0000, #fbff00);
+                    -webkit-background-clip: text;
+               }
+
+               50% {
+                    background: linear-gradient(#fbff00, #ff0000);
+                    -webkit-background-clip: text;
+               }
+
+               75% {
+                    background: linear-gradient(#ff0000, #fbff00);
+                    -webkit-background-clip: text;
+               }
+
+               100% {
+                    background: linear-gradient(#ff0000, #ff0000);
+                    -webkit-background-clip: text;
+               }
+          }
+
+          .navContainer2 {
+               float: right;
+               display: block;
+          }
+
+          .navUl2 {
+               display: flex;
+          }
+
+          .navLi2 {
+               color: white;
+               padding: 15px 15px;
+               font-family: 'Changa', sans-serif;
+               list-style-type: none;
+               transition: all 1s ease;
+          }
+
+          .navLi2:hover {
+               margin-top: -10px;
+          }
+
+          .navLi2 .notactiveA:hover:not(.active) {
+               border-bottom: 1px solid red;
+          }
+
+          .active {
+               border-bottom: 1px solid red;
+               color: red;
+               text-decoration: none;
+               cursor: no-drop;
+          }
+
+          .notactiveA {
+               color: red;
+               text-decoration: none;
+          }
+
+          .mainimgContainer {
+               clear: right;
+               background-color: #111111;
+               width: 100%;
+               height: 700px;
+               position: relative;
+          }
+
+          .floating {
+               animation-name: floating;
+               animation-duration: 5s;
+               animation-iteration-count: infinite;
+               animation-timing-function: ease-in-out;
+               margin-top: 80px;
+               position: absolute;
+               width: 750px;
+          }
+
+          @keyframes floating {
+               from {
+                    transform: translate(0, 0px);
+               }
+
+               65% {
+                    transform: translate(0, 60px);
+               }
+
+               to {
+                    transform: translate(0, -0px);
+               }
+          }
+
+          .mainimgH1 {
+               font-family: 'Changa', sans-serif;
+               color: aliceblue;
+               text-align: right;
+               margin-right: 100px;
+               font-size: 50px;
+               text-shadow: 5px 5px 5px rgb(103, 103, 103);
+          }
+
+          .mainimgH2 {
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               color: white;
+               text-align: right;
+               margin-right: 150px;
+          }
+
+          .tableContainer {
+               float: right;
+          }
+
+          .table {
+               width: 100%;
+          }
+
+          .tableImg {
+               width: 250px;
+          }
+
+          .td {
+               font-size: 14px;
+               color: white;
+               text-align: center;
+          }
+
+          .floatingContainer {
+               display: block;
+               width: 100%;
+               height: 200px;
+          }
+
+          .floating2 {
+               animation-name: floating2;
+               animation-duration: 20s;
+               animation-iteration-count: infinite;
+               animation-timing-function: linear;
+               margin-left: 100px;
+               position: absolute;
+               width: 200px;
+          }
+
+          @keyframes floating2 {
+               20% {
+                    transform: rotate(360deg);
+               }
+
+               50% {
+                    transform: translate(1000px, 0px);
+               }
+
+          }
+
+          .floating3 {
+               animation-name: floating3;
+               animation-duration: 20s;
+               animation-iteration-count: infinite;
+               animation-timing-function: linear;
+               margin-left: 1100px;
+               position: absolute;
+               width: 200px;
+          }
+
+          @keyframes floating3 {
+               20% {
+                    transform: rotate(-360deg);
+               }
+
+               50% {
+                    transform: translate(-1000px, 0px);
+               }
+
+          }
+
+          .secondmainimgContainer {
+               width: 100%;
+               display: block;
+               height: 825px;
+          }
+
+          .secondmainImg1 {
+               width: 100%;
+               display: flex;
+          }
+
+          .secondmainImg2 {
+               display: flex;
+               width: 40%;
+               margin-top: -700px;
+               margin-left: 15%;
+          }
+
+          .secondmainbodyText {
+               width: 45%;
+               margin-left: 55%;
+               margin-top: -500px;
+               color: aliceblue;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               text-align: left;
+               font-size: 18px;
+          }
+
+          .secondbodytexth3 {
+               color: rgb(0, 0, 0);
+               text-shadow: -1px 0 aqua, 0 1px aqua, 1px 0 white, 0 -1px white;
+               font-size: 40px;
+               font-family: 'Lobster', cursive;
+          }
+
+          .secondbodytexth1 {
+               color: black;
+               font-size: 45px;
+               font-family: 'Lobster', cursive;
+               text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+          }
+
+          .secondbodytextp {
+               color: black;
+               font-family: 'Lobster', cursive;
+               text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+               line-height: 35px;
+          }
+
+          .table2 {
+               width: 40%;
+               margin-left: -20px;
+          }
+
+          .td2 {
+               width: 25%;
+               padding: 0px 40px 0px 40px;
+               color: black;
+               text-align: center;
+               font-family: 'Lobster', cursive;
+               text-shadow: -1px 0 aqua, 0 1px aqua, 1px 0 aqua, 0 -1px aqua;
+          }
+
+          .specialtd2 {
+               width: 25%;
+               padding: 0px 40px 0px 40px;
+               color: black;
+               font-size: 30px;
+               text-align: center;
+               font-family: 'Lobster', cursive;
+               text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 aqua, 0 -1px rgb(255, 255, 255);
+          }
+
+          .hoverTable {
+               width: 100%;
+               overflow-x: hidden;
+          }
+
+          .table3 {
+               width: 100%;
+          }
+
+          .td3 {
+               position: relative;
+               transition: all 1s linear;
+          }
+
+          .dropdownImg1 {
+               width: 375px;
+               transition: all 1s linear;
+          }
+
+          .dropdownImg2 {
+               width: 375px;
+               transition: all 1s linear;
+          }
+
+          .dropdownImg3 {
+               width: 375px;
+               transition: all 1s linear;
+          }
+
+          .dropdownImg4 {
+               width: 375px;
+               transition: all 1s linear;
+          }
+
+          .dropdownImg5 {
+               width: 375px;
+               transition: all 1s linear;
+          }
+
+          .dropdownImg6 {
+               width: 375px;
+               transition: all 1s linear;
+          }
+
+          .dpdownContent {
+               display: none;
+               border: 1px solid rgb(35, 35, 255);
+               background-color: #111111;
+               color: white;
+               z-index: 1;
+               position: absolute;
+               transform: translate(0,-375px);
+               min-width: 500px;
+               height: 220px;
+               transition: all 1s linear;
+          }
+
+          .dpcontenth4 {
+               transform: translate(30px, 0);
+          }
+
+          .dpcontentp {
+               font-size: 14px;
+               display: flex;
+               justify-content: center;
+               font-family: 'Changa', sans-serif;
+               line-height: 25px;
+          }
+
+          .td3:hover .dpdownContent {
+               display: block;
+          }
+
+          .td3:hover .dropdownImg1 {
+               opacity: 0.5;
+          }
+
+          .dpdownContent2 {
+               display: none;
+               border: 1px solid rgb(35, 35, 255);
+               background-color: #111111;
+               color: white;
+               z-index: 1;
+               position: absolute;
+               transform: translate(50px,-195px);
+               min-width: 700px;
+               height: 180px;
+          }
+
+          .td3:hover .dpdownContent2 {
+               display: block;
+          }
+
+          .td3:hover .dropdownImg2 {
+               opacity: 0.5;
+          }
+
+          .dpdownContent3 {
+               display: none;
+               border: 1px solid rgb(35, 35, 255);
+               background-color: #111111;
+               color: white;
+               z-index: 1;
+               position: absolute;
+               transform: translate(50px,-195px);
+               min-width: 700px;
+               height: 180px;
+          }
+
+          .td3:hover .dpdownContent3 {
+               display: block;
+          }
+
+          .td3:hover .dropdownImg3 {
+               opacity: 0.5;
+          }
+          .dpdownContent4 {
+               display: none;
+               border: 1px solid rgb(35, 35, 255);
+               background-color: #111111;
+               color: white;
+               z-index: 1;
+               position: absolute;
+               transform: translate(-190px,-380px);
+               min-width: 500px;
+               height: 250px;
+          }
+
+          .td3:hover .dpdownContent4 {
+               display: block;
+          }
+
+          .td3:hover .dropdownImg4 {
+               opacity: 0.5;
+          }
+          .dpdownContent5 {
+               display: none;
+               border: 1px solid rgb(35, 35, 255);
+               background-color: #111111;
+               color: white;
+               z-index: 1;
+               position: absolute;
+               transform: translate(50px,-195px);
+               min-width: 700px;
+               height: 180px;
+          }
+
+          .td3:hover .dpdownContent5 {
+               display: block;
+          }
+
+          .td3:hover .dropdownImg6 {
+               opacity: 0.5;
+          }
+          .dpdownContent6 {
+               display: none;
+               border: 1px solid rgb(35, 35, 255);
+               background-color: #111111;
+               color: white;
+               z-index: 1;
+               position: absolute;
+               transform: translate(50px,-220px);
+               min-width: 700px;
+               height: 200px;
+          }
+
+          .td3:hover .dpdownContent6 {
+               display: block;
+          }
+
+          .td3:hover .dropdownImg5 {
+               opacity: 0.5;
+          }
+
+          .loopingvideoContainer {
+               width: 80%;
+               height: 900px;
+               background-image: url("https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/display-room.webp");
+               background-size: 100%;
+               background-repeat: no-repeat;
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+          }
+          
+          .loopingVideo {
+               width: 60.6%;
+               margin-top: 30px;
+               margin-left: auto;
+               margin-right: auto;
+               display: block;
+               border-radius: 2%;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="bannerContainer">
+          <div class="bannerimgContainer">
+               <img class="bannerImg"
+                    src="/image.html/republic-of-gamers-new-logo-C7B28EBFFE-seeklogo.com-removebg-preview.png">
+          </div>
+          <div class="navContainer">
+               <ul class="navUl">
+                    <li class="navLi">PRODUCT</li>
+                    <li class="navLi">INNOVATION</li>
+                    <li class="navLi">DOWNLOADS</li>
+                    <li class="navLi">COMMUNITY</li>
+                    <li class="navLi">WHAT'S HOT</li>
+                    <li class="navLi">SUPPORT</li>
+               </ul>
+          </div>
+          <div class="bannericonContainer">
+               <img class="bannerIcon" src="/image.html/60562_asus_512x512-removebg-preview.png">
+          </div>
+          <div class="inputContainer">
+               <label class="dropdownLabel" for="text"><i id="i" class="fa-solid fa-magnifying-glass"></i></label>
+               <input type="text" name="text" placeholder="Search The Products">
+          </div>
+     </div>
+
+     <div class="zephyrusContainer">
+          <h1 class="zephyrusText">Asus Rog Zephyrus G 15</h1>
+     </div>
+
+     <div class="navContainer2">
+          <ul class="navUl2">
+               <li class="navLi2"><a class="active" href="#home">Features</a></li>
+               <li class="navLi2"><a class="notactiveA" href="#tech">Tech Specs</a></li>
+               <li class="navLi2"><a class="notactiveA" href="#awards">Awards</a></li>
+               <li class="navLi2"><a class="notactiveA" href="#gallery">Gallery</a></li>
+               <li class="navLi2"><a class="notactiveA" href="#support">Support</a></li>
+          </ul>
+     </div>
+
+     <div class="mainimgContainer">
+          <img class="floating"
+               src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/swiper/speakers-2.webp">
+          <h1 class="mainimgH1">ROG ZEPHYRUS G15</h1>
+          <h2 class="mainimgH2">GAME FOR ANYTHING</h2>
+
+          <div class="tableContainer">
+               <table class="table">
+                    <tbody class="tbody">
+                         <tr class="tr">
+                              <td class="td"><img class="tableImg"
+                                        src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon_02.webp">
+                                   <p class="tableP">Powered by up to the latest Ryzen™ 9 <br>
+                                        6900HS CPU and up to an NVIDIA<br> GeForce RTX™ 3080<br>
+                                        Laptop GPU with MUX Switch</p>
+                              </td>
+                              <td class="td"><img class="tableImg"
+                                        src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon_03.webp">
+                                   <p class="tableP">QHD 240Hz/3ms panel with Pantone®<br>
+                                        validation, Dolby Vision support, 100% <br>
+                                        DCI-P3 coverage and super-narrow<br>bezels</p>
+                              </td>
+                              <td class="td"><img class="tableImg"
+                                        src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon_04.webp">
+                                   <p class="tableP">Six speakers with Dolby Atmos®<br>
+                                        support and Two-Way AI Noise<br>
+                                        Cancelation technology
+                              </td>
+                         </tr>
+                         <tr class="tr">
+                              <td class="td"><img class="tableImg"
+                                        src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon_05.webp">
+                                   <p class="tableP">With excellent battery life,<br>
+                                        USB Type-C charging, and Wi-Fi 6E <br>
+                                        support, enjoy the freedom to take<br>
+                                        your machine anywhere</p>
+                              </td>
+                              <td class="td"><img class="tableImg"
+                                        src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon_06.webp">
+                                   <p class="tableP">ROG Intelligent Cooling: Liquid<br>
+                                        metal thermal compound on the CPU<br>
+                                        and 0dB ambient cooling</p>
+                              </td>
+                         </tr>
+                    </tbody>
+               </table>
+          </div>
+     </div>
+
+     <div class="floatingContainer">
+          <img class="floating2"
+               src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon-nvidia.webp">
+          <img class="floating3"
+               src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/icon-xbox.webp">
+     </div>
+
+     <div class="secondmainimgContainer">
+          <img class="secondmainImg1"
+               src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-bg.webp">
+          <img class="secondmainImg2"
+               src="https://dlcdnwebimgs.asus.com/files/media/6B37D3B0-248E-4697-BF5B-2EC5C47CE408/V3/img/design-front.png">
+          <div class="secondmainbodyText">
+               <h3 class="secondbodytexth3">DESIGN</h3>
+               <h1 class="secondbodytexth1">SLEEK AND STREAMLINED</h1>
+               <p class="secondbodytextp">Show off your signature style in Moonlight White or Eclipse Gray. The
+                    reinforced metal<br>
+                    lid is precision cut with a dot matrix design that adds a subtle shimmering effect from<br>
+                    prismatic film beneath. Stay versatile with thoughtful conveniences like a 180° ErgoLift<br>
+                    hinge for more flexible viewing and a wide touchpad for easy navigation.</p>
+               <table class="table2">
+                    <tbody class="tbody2">
+                         <tr class="tr2">
+                              <td class="td2">Choice&nbsp;Of</td>
+                              <td class="td2">Ergo Lift</td>
+                              <td class="td2">TouchPad</td>
+                              <td class="td2"></td>
+                         </tr>
+                         <tr class="tr2">
+                              <td class="specialtd2">1</td>
+                              <td class="specialtd2">180deg</td>
+                              <td class="specialtd2">20% Larger</td>
+                              <td class="specialtd2">1.9 Kg</td>
+                         </tr>
+                         <tr class="tr2">
+                              <td class="td2">Colors</td>
+                              <td class="td2">Hinge</td>
+                              <td class="td2">Than&nbsp;Previous&nbsp;Gen</td>
+                              <td class="td2">Light&nbsp;Weight</td>
+                         </tr>
+                    </tbody>
+               </table>
+          </div>
+
+     </div>
+
+     <div class="hoverTable">
+          <table class="table3">
+               <tbody class="tbody3">
+                    <tr class="tr3">
+                         <td rowspan="2" class="td3"><img class="dropdownImg1"
+                                   src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-1.webp">
+                              <div class="dpdownContent">
+                                   <h4 class="dpcontenth4">Prismatic shine</h4>
+                                   <p class="dpcontentp">The asymmetrical dot matrix design on the lid is made with
+                                        a<br>
+                                        precision CNC milling process that creates 8279 perfectly spaced<br>
+                                        perforations across an incredibly compact surface area. Prismatic<br>
+                                        film gleams up from beneath, adding a subtle but striking shimmering<br>
+                                        effect when the light hits it at just the right angle.</p>
+                              </div>
+                         </td>
+                         <td class="td3"><img class="dropdownImg2"
+                                   src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-2.webp">
+                              <div class="dpdownContent2">
+                                   <h4 class="dpcontenth4">ErgoLift convenience</h4>
+                                   <p class="dpcontentp">Open up more viewing angles than ever with a convenient 180°
+                                        ErgoLift hinge. Typical laptops have a<br>
+                                        limited range of motion that can be inconvenient for sharing or positioning
+                                        comfortably. The Zephyrus G15<br>
+                                        lets you flip the screen all the way back to share with a group or to get a
+                                        better angle for your own viewing,<br>
+                                        whether you’re catching streams in bed or actually using it on your lap.</p>
+                              </div>
+                         </td>
+                         <td class="td3"><img class="dropdownImg3"
+                                   src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-4.webp">
+                              <div class="dpdownContent3">
+                                   <h4 class="dpcontenth4">Reinforced strength</h4>
+                                   <p class="dpcontentp">Honeycomb reinforcements beneath the palm rests add rigidity with minimal material to keep the chassis<br>
+                                        light and strong. The design resists flex under pressure, for a firmer feel while you’re inputting commands<br>
+                                        or carrying your laptop by hand.</p>
+                              </div>
+                         </td>
+                         <td rowspan="2" class="td3"><img class="dropdownImg4"
+                                   src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-6.webp">
+                              <div class="dpdownContent4">
+                                   <h4 class="dpcontenth4">Responsive touchpad</h4>
+                                   <p class="dpcontentp">Improve everyday comfort and usability with a wide touchpad that’s<br>
+                                        20% larger than previous generations. More space means more<br>
+                                        comfortable hand movements and gestures while you’re browsing<br>
+                                        the web and navigating apps, and the new glass surface makes<br>
+                                        input super silky. The touchpad controller is also 40% faster, enabling<br>
+                                        quicker detection, greater precision, and lower latency for a seamless <br>
+                                        user experience.</p>
+                              </div>
+                         </td>
+                    </tr>
+
+                    <tr class="tr3">
+                         <td class="td3"><img class="dropdownImg6" src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-5.webp">
+                              <div class="dpdownContent5">
+                                   <h4 class="dpcontenth4">Resilient chassis</h4>
+                                   <p class="dpcontentp">A durable magnesium-aluminum lid and deck protect your device against bumps and knocks. Sturdy even<br>
+                                             machined down to ultrathin sizes, this alloy keeps the chassis lightweight and portable. Carry it everywhere<br>
+                                             worry-free, and stay stylish with a wear-resistant coating that keeps the surfaces looking sleek every day.</p>
+                              </div>
+                         </td>
+                    <td class="td3"><img class="dropdownImg5" src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/img/design-3.webp">
+                              <div class="dpdownContent6">
+                                   <h4 class="dpcontenth4">Stealthy design</h4>
+                                   <p class="dpcontentp">Maintain a low profile with a new Stealth Type keyboard that keeps noise under 30 dB. Rapidly type up<br>
+                                        notes during meetings without disrupting the flow of conversation. Discreetly tab through chats and<br>
+                                        windows in class. Play games incognito at the cafe or coffee shop. With a quiet keyboard, you can focus<br>
+                                        more on what you’re doing, and less on your environment.<br>
+                                        *30dB as tested internally by ASUS, noise level may differ by product usage.</p>
+                              </div>
+                    </td>
+                         <td class="td3"></td>
+                         <td class="td3"></td>
+                    </tr>
+
+                    < </tbody>
+          </table>
+     </div>
+
+     <div class="loopingvideoContainer">
+          <img class="videoBgImg" src="">
+          <video class="loopingVideo" src="https://dlcdnwebimgs.asus.com/files/media/C93177C5-674A-43E4-818C-045854974C8B/V5/video/display.mp4"
+          autoplay loop muted></video>
+     </div>
+     
+
+</body>
+
+</html>

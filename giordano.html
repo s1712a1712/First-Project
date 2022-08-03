@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Giordano</title>
+     <script src="https://kit.fontawesome.com/8cbc109b9d.js" crossorigin="anonymous"></script>
+     <style>
+body{
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+}
+.bannerContainer{
+     display: flex;
+     justify-content: space-around;
+     background-color: rgb(224, 230, 235);
+}
+.bannerimgContainer{
+     width: 40%;
+     margin-left: 10%;
+}
+.bannerImg{
+     width: 250px;
+}
+.bannerP{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bannerUl{
+     margin-left: -8%;
+}
+.bannerLi{
+     list-style-type: none;
+     display: inline-block;
+     font-size: 14px;
+     padding: 0px 10px 0px 10px;
+}
+.bannerLi:hover{
+     border-bottom: 2px solid gray;
+     cursor: pointer;
+}
+.navContainer{
+     background-color: black;
+     margin-top: -20px;
+}
+.navUl{
+     padding: 20px 0px 20px 0px;
+     display: flex;
+     justify-content: center;
+}
+.navLi{
+     display: inline-block;
+     color: white;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 14px;
+     padding: 0px 25px 0px 25px;
+}
+.dropdownDiv {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdownhref{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: margin-left 1s ease;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.171);
+}
+.dropdownhref:hover{
+     text-shadow: 2px 1px greenyellow;
+     margin-left: 10px;
+}
+.navLi:hover{
+     border-bottom: 2px solid gray;
+     cursor: pointer;
+}
+.navLi:hover .dropdownDiv{
+     display: block;
+     margin-top: 1px;
+}
+.displayDiv{
+     overflow-x: scroll;
+     width: 100%;
+     display: flex;
+     justify-content:space-evenly;
+}
+.galleryDiv{
+}
+.galleryImg1{
+     width: 155%;
+}
+.galleryImg2{
+     width: 583%;
+     margin-left: 205%;
+}
+.galleryImg3{
+     width: 583%;
+     margin-left: 680%;
+}
+.tableImg{
+     width: 90%;
+     transition: all 1s ease;
+}
+.tableImg:hover{
+     margin-top: -10px;
+     width: 92%;
+     cursor: pointer;
+}
+.firstTable{
+     width: 85%;
+     margin-left: 10%;
+     margin-top: 50px;
+}
+.tableImg2{
+     width: 70%;
+     z-index: -1;
+}
+.tableContainer2{
+     margin-top: 50px;
+     width: 100%;
+}
+.secondTable{
+     width: 100%;
+     margin-left: 100px;
+     overflow-x: hidden;
+}
+.span{
+     margin-left: -130px;
+     text-align: center;
+     font-size: 14px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.spanSpecial{
+     margin-left: -130px;
+     text-align: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 14px;
+     margin-bottom: -20px;
+}
+.span2{
+     margin-left: 60px;
+}
+.dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/373_6b86b957-8d02-45ff-804e-7efed7ad30e3_540x.jpg?v=1654921558");
+     margin-top: -285px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd:hover .dropdown-content{
+     display: block;
+}
+.secondTd:hover .tableImg2{
+     opacity: 0;
+}
+.secondTd2:hover .dropdown-content2{
+     display: block;
+}
+.secondTd2:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content2{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/112_670685fe-87d7-4533-ab39-d4d3c58af2af_540x.jpg?v=1654921332");
+     margin-top: -290px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd3:hover .dropdown-content3{
+     display: block;
+}
+.secondTd3:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content3{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/022_e89412fd-c2e2-4654-ba94-499e24b7beea_540x.jpg?v=1654921250");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd4:hover .dropdown-content4{
+     display: block;
+}
+.secondTd4:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content4{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/16_2_1c9289e5-117d-425a-acd5-bced631d9ed6_540x.jpg?v=1654921461");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd5:hover .dropdown-content5{
+     display: block;
+}
+.secondTd5:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content5{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/01_2_54531e11-58bb-4f03-bac4-12b0b01e56fa_540x.jpg?v=1654921183");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd6:hover .dropdown-content6{
+     display: block;
+}
+.secondTd6:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content6{
+     display: none;
+     position: absolute;
+     background-color: #FFFFFF;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/362_697eef9c-d718-4106-bd5c-a839b635733d_540x.jpg?v=1654853000");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd7:hover .dropdown-content7{
+     display: block;
+}
+.secondTd7:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content7{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/122_2e73824a-534f-4032-833b-0c272800dcce_540x.jpg?v=1654852941");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd8:hover .dropdown-content8{
+     display: block;
+}
+.secondTd8:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content8{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/122_2e73824a-534f-4032-833b-0c272800dcce_540x.jpg?v=1654852941");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd9:hover .dropdown-content9{
+     display: block;
+}
+.secondTd9:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content9{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/132_22798af9-f51c-461b-845f-3e6f778796ab_540x.jpg?v=1655692172");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.secondTd10:hover .dropdown-content10{
+     display: block;
+}
+.secondTd10:hover .tableImg2{
+     opacity: 0;
+}
+.dropdown-content10{
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 5px 0px 5px 0px rgb(81, 81, 81);
+     min-width: 200px;
+     min-height: 220px;
+     z-index: 1;
+     background-image: url("https://cdn.shopify.com/s/files/1/2484/5444/products/12_1_2_2_1000_1000_540x.jpg?v=1655692107");
+     margin-top: -280px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     border-radius: 10px 10px;
+}
+.dropdowntextContainer{
+     margin-top: 100px;
+}
+.dropdownP{
+     padding: 10px 0px 10px 0px;
+     background-color: #FFFFFF;
+     border: 1px solid black;
+     border-radius: 5px 5px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 14px;
+     text-align: center;
+     font-weight: bolder;
+     transition: all 1s ease;
+     display: block;
+}
+.dropdownP:hover{
+     background-color: black;
+     cursor: pointer;
+     color: white;
+}
+.dropdownLi{
+     display: inline-block;
+     padding: 5px 10px 5px 10px;
+     background-color: white;
+     border: 1px solid black;
+     border-radius: 20px 20px 20px 20px;
+     font-size: 14px;
+     margin-left: -5px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     text-align: center;
+     transition: all 1s ease;
+}
+.dropdownLi:hover{
+     background-color: black;
+     color: #FFFFFF;
+     cursor: pointer;
+}
+.g-motionContainer{
+     width: 100%;
+     margin-top: 100px;
+}
+.g-motionImg{
+     width: 100%;
+}
+.brandContainer{
+     display: flex;
+     justify-content:space-evenly;
+}
+.brandimgContainer{
+     width: 10%;
+}
+.brandImg{
+     width: 200px;
+}
+.instagramContainer{
+     background-image: linear-gradient(rgb(253, 255, 215),rgba(255, 255, 255, 0.623));
+}
+.instagramP{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 14px;
+     text-align: center;
+     margin-top: 50px;
+     margin-bottom: 50px;
+}
+.instagramP2{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 14px;
+     color: #FFFFFF;
+     background-color: black;
+     padding: 10px 35px 10px 35px;
+     display: table;
+     margin-left: auto;
+     margin-right: auto;
+     font-weight: bolder;
+     margin-top: 50px;
+     transition: all 1s ease;
+     border:1px solid black;
+}
+.instagramP2:hover{
+     cursor: pointer;
+     color: black;
+     background-color: #FFFFFF;
+}
+.instagramP::first-line{
+     font-size: 18px;
+     font-weight: bolder;
+}
+.instagramgalleryContainer{
+     display: flex;
+     justify-content:center;
+     margin-left: 15px;
+}
+.instagramGallery{
+     width: 220px;
+}
+.instagramImg{
+     width: 200px;
+}
+.instagramImg:hover{
+     cursor: pointer;
+}
+.menuContainer{
+     background-image:linear-gradient(  #F2F4F3, #F2F4F3,#F2F4F3);
+}
+.menuTable{
+     width: 50%;
+     margin-left: 150px;
+}
+.menuTh,.menuTd{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 14px;
+     text-align: left;
+     padding: 10px 0px 0px 0px;
+}
+.menuTd:hover{
+    color: rgb(0, 60, 255);
+    cursor: pointer;
+}
+.stayconnectedContainer{
+     display: flex;
+     justify-content: space-evenly;
+     margin-left: 800px;
+     margin-top: -250px;
+}
+.stayconnectedP{
+     font-size: 16px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: bolder;
+}
+.stayconnectedP2{
+     font-size: 16px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.emailContainer{
+     margin-left: 941px;
+     margin-top: 50px;
+}
+#submitBtn{
+     background-color: gray;
+     width: 20%;
+     color: white;
+     transition: all 1s ease;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#submitBtn:focus{
+     background-color: white;
+     color: black;
+}
+.copyrightContainer{
+     font-size: 14px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: black;
+     color: rgba(255, 255, 255, 0.788);
+     margin-top: 60px;
+     height: 50px;
+     text-align: center;
+}
+
+     </style>
+</head>
+<body>
+     <div class="bannerContainer">
+          <div class="bannerimgContainer">
+               <img class="bannerImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Giordano-logo.png?v=1652347237">
+          </div>
+          <div class="bannerText">
+               <p class="bannerP">FREE TO BUY. NO MINIMUM PURCHASE.</p>
+               <ul class="bannerUl">
+                    <li class="bannerLi"><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;Shopping Cart</li>
+                    <li class="bannerLi"><i class="fa-solid fa-heart"></i>&nbsp;&nbsp;Wish Lists</li>
+                    <li class="bannerLi">Log/My account</li>
+               </ul>
+          </div>
+     </div>
+
+     <div class="navContainer">
+          <ul class="navUl">
+               <li class="navLi">HOME</li>
+               <li class="navLi">MEN
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Hoodie,Jacket and Sweatshirt</a>
+                         <a class="dropdownhref" href="#">Shirt</a>
+                         <a class="dropdownhref" href="#">Polo Shirt</a>
+                         <a class="dropdownhref" href="#">Tee</a>
+                         <a class="dropdownhref" href="#">Pant</a>
+                    </div>
+               </li>
+               <li class="navLi">WOMEN
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Hoodie,Jacket and Sweatshirt</a>
+                         <a class="dropdownhref" href="#">Shirt</a>
+                         <a class="dropdownhref" href="#">Polo Shirt</a>
+                         <a class="dropdownhref" href="#">Tee</a>
+                         <a class="dropdownhref" href="#">Pant</a>
+                    </div>
+               </li>
+               <li class="navLi">ACCESSORIES
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Bags and Backpacks</a>
+                         <a class="dropdownhref" href="#">Wallets</a>
+                         <a class="dropdownhref" href="#">Innerwear</a>
+                         <a class="dropdownhref" href="#">Caps</a>
+                         <a class="dropdownhref" href="#">Umberalla</a>
+                         <a class="dropdownhref" href="#">Belts</a>
+                    </div>
+               </li>
+               <li class="navLi">ACTIVE FIT
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Boxer</a>
+                         <a class="dropdownhref" href="#">Brief</a>
+                         <a class="dropdownhref" href="#">Tee & Tank</a>
+                         <a class="dropdownhref" href="#">Trunk</a>
+                    </div>
+               </li>
+               <li class="navLi">JUNIOR
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Top</a>
+                         <a class="dropdownhref" href="#">Bottom</a>
+                    </div>
+               </li>
+               <li class="navLi">TRAVEL GEAR
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Backpack</a>
+                         <a class="dropdownhref" href="#">Duffle & Trolley Bag</a>
+                         <a class="dropdownhref" href="#">lagguage</a>
+                    </div>
+               </li>
+               <li class="navLi">BSX
+                    <div class="dropdownDiv">
+                         <a class="dropdownhref" href="#">Top</a>
+                         <a class="dropdownhref" href="#">Bottom</a>
+                         <a class="dropdownhref" href="#">Accessories</a>
+                    </div>
+               </li>
+               <li class="navLi">GIORDANO REWARD</li>
+          </ul>
+     </div>
+
+     <div class="displayDiv">
+          <div class="galleryDiv">
+               <img class="galleryImg1" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Travel_Gear_Website_Banner_Size.jpg?v=1646898271">
+          </div>
+          <div class="galleryDiv">
+               <img class="galleryImg2" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Living_Your_Color_1.jpg?v=1656580244">
+          </div>
+          <div class="galleryDiv">
+               <img class="galleryImg3" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Web_Banner.jpg?v=1653016880">
+          </div>
+     </div>
+
+     <div class="tableContainer">
+          <table class="firstTable">
+               <tbody class="firstTbody">
+                    <tr class="firstTr">
+                         <td class="firstTd"><img title="Shop Now" class="tableImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Men_Collection_Home_Page_Banner.jpg?v=1649129138"></td>
+                         <td class="firstTd"><img title="Shop Now" class="tableImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Women_Collection_Home_Page_Banner.jpg?v=1649129138"></td>
+                         <td class="firstTd"><img title="Shop Now" class="tableImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Active_Fit_Home_Page_Banner.jpg?v=1649129138"></td>
+                    </tr>
+                    <tr class="firstTr">
+                         <td class="firstTd"><img title="Shop Now" class="tableImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/BSX_Home_Page_Banner.jpg?v=1649129138"></td>
+                         <td class="firstTd"><img title="Shop Now" class="tableImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Junior_Home_Page_Banner.jpg?v=1649129138"></td>
+                         <td class="firstTd"><img title="Shop Now" class="tableImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/MYS.jpg?v=1656581372"></td>
+                    </tr>
+               </tbody>
+          </table>     
+     </div>
+     <div class="tableContainer2">
+          <table class="secondTable">
+               <tbody class="secondTbody">
+                    <tr class="secondTr">
+                         <td class="secondTd"><img class="tableImg2" src="/image.html/gtee1.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Dark Pine X<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd2"><img class="tableImg2" src="/image.html/gtee2.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Dark Hauted Red<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content2">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd3"><img class="tableImg2" src="/image.html/gtee3.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Dark Pine<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content3">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd4"><img class="tableImg2" src="/image.html/gtee4.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Midnight haze<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content4">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd5"><img style="width: 55%;margin-top: -20px;" class="tableImg2" src="/image.html/gtee5.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Signature White<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content5">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                    </tr>
+                    <tr class="secondTr">
+                         <td class="secondTd6"><img  class="tableImg2" src="/image.html/gtee6.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Midnight Haze<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content6">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd7"><img  class="tableImg2" src="/image.html/gtee7.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Signature Black<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content7">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd8"><img  class="tableImg2" src="/image.html/gtee8.png"><span class="span">Giordano<br>Men's Retro Printed Tee-Signature Black<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content8">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd9"><img  class="tableImg2" src="/image.html/gtee9.png"><span class="span">Giordano<br>Men's Cotton Interlock Crew Neck Pocket<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content9">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                         <td class="secondTd10"><img  style="width: 45%;" class="tableImg2" src="/image.html/gtee10.png"><span class="span">Giordano<br>Men's Cotton Interlock Crew Neck Pocket<br><span class="span2"><b>K 45,990.00</b></span></span>
+                              <div class="dropdown-content10">
+                                   <div class="dropdowntextContainer">
+                                   <p class="dropdownP">SELECT OPTIONS</p>
+                                   <ul class="dropdownUl">
+                                        <li class="dropdownLi">S</li>
+                                        <li class="dropdownLi">M</li>
+                                        <li class="dropdownLi">L</li>
+                                        <li class="dropdownLi">XL</li>
+                                   </ul>
+                                   </div>
+                              </div>
+                         </td>
+                    </tr>
+               </tbody>
+          </table>     
+     </div>
+
+
+     <div class="g-motionContainer">
+          <img class="g-motionImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/G-Motion_W_B_Banner_a_1370x600_5141acab-4de2-4521-b20e-8abe31f8608b_1920x.jpg?v=1641440102">
+     </div>
+
+     <div class="brandContainer">
+          <div class="brandimgContainer">
+               <img class="brandImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/gio_logo_95x44px_256x256_33d4fab8-5541-45ca-acf3-821feb836132_250x.png?v=1652151799">
+          </div>
+          <div class="brandimgContainer">
+               <img class="brandImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/TRV_logo_200x_cee71202-100a-4e6b-894e-5aeece6d3ec7_250x.png?v=1623845759">
+          </div>
+          <div class="brandimgContainer">
+               <img class="brandImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Active_Fit_logo_200x_ea2c8de8-b731-4b9f-b3ad-63f3b75f895f_250x.png?v=1623845826">
+          </div>
+          <div class="brandimgContainer">
+               <img class="brandImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/Junior_logo_200x_58d86645-1a16-4c89-93f3-5977cde64dd0_250x.png?v=1623845852">
+          </div>
+          <div class="brandimgContainer">
+               <img class="brandImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/BSX_logo_200x_56033b91-afa1-41aa-939c-2ddb12459c35_250x.png?v=1623845874">
+          </div>
+     </div>
+
+
+     <div class="instagramContainer">
+          <p class="instagramP"><i class="fa-brands fa-instagram"></i>#GIORDANO MYANMAR ON INSTAGRAM<br><br>
+               The best will come to you on Giordano's Instagram.</p>
+          <div class="instagramgalleryContainer">
+               <div class="instagramGallery">
+                    <img class="instagramImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/188990868_3644385725676614_4905208059250105692_n_640x_f3df22d7-c438-44b8-9cb2-d13bba144396_640x.jpg?v=1623845957">
+               </div>
+               <div class="instagramGallery">
+                    <img class="instagramImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/189781646_3646147042167149_3576747452297201602_n_640x_108eb625-e576-4dd9-99b6-942e4ae4db78_640x.jpg?v=1623846051">
+               </div>
+               <div class="instagramGallery">
+                    <img class="instagramImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/192785720_3644766498971870_2228532678725637310_n_1_640x_ac544385-7649-44f0-adfd-0284112842ea_640x.jpg?v=1623846077">
+               </div>
+               <div class="instagramGallery">
+                    <img class="instagramImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/196703190_3673570556091464_1824724770045853676_n_640x_de78c7b4-2592-438f-8cb6-947cd0979bac_640x.jpg?v=1623846099">
+               </div>
+               <div class="instagramGallery">
+                    <img class="instagramImg" src="https://cdn.shopify.com/s/files/1/2484/5444/files/195346538_3664885953626591_8176404349193890528_n_640x_7c6e5eb3-32e0-426f-8552-0b77368a93c2_640x.jpg?v=1623846123">
+               </div>
+          </div>
+          <p class="instagramP2">VIEW GALLERY</p>
+     </div>
+
+     <div class="menuContainer">
+          <table class="menuTable">
+               <thead class="menuThead">
+                    <tr class="menuTr">
+                         <th class="menuTh">SHOP</th>
+                         <th class="menuTh">INFORMATION</th>
+                         <th class="menuTh">CUSTORMERS SERVICE</th>
+                    </tr>
+               </thead>
+               <tbody class="menuTbody">
+                    <tr class="menuTr">
+                         <td class="menuTd">How to buy guide</td>
+                         <td class="menuTd">About us</td>
+                         <td class="menuTd">Payment</td>
+                    </tr>
+                    <tr class="menuTr">
+                         <td class="menuTd">Deliverable areas</td>
+                         <td class="menuTd">Contact us</td>
+                         <td class="menuTd">Delivery Service</td>
+                    </tr>
+                    <tr class="menuTr">
+                         <td class="menuTd">Collaboration program</td>
+                         <td class="menuTd">FAQs</td>
+                         <td class="menuTd">Refer a friend</td>
+                    </tr>
+                    <tr class="menuTr">
+                         <td class="menuTd"></td>
+                         <td class="menuTd">Our Brands</td>
+                         <td class="menuTd">Shop & earn points</td>
+                    </tr>
+                    <tr class="menuTr">
+                         <td class="menuTd"></td>
+                         <td class="menuTd">Cookie policy</td>
+                         <td class="menuTd">Loyalty progrmas &<br>Conditions</td>
+                    </tr>
+                    <tr class="menuTr">
+                         <td class="menuTd"></td>
+                         <td class="menuTd">Privacy policy</td>
+                         <td class="menuTd">How to join loyalty<br> programs?</td>
+                    </tr>
+                    <tr class="menuTr">
+                         <td class="menuTd"></td>
+                         <td class="menuTd">Terms & conditions</td>
+                         <td class="menuTd"></td>
+                    </tr>
+               </tbody>
+          </table>
+     </div>
+     <div class="stayconnectedContainer">
+          <div class="iconContainer">
+               <p class="stayconnectedP">STAY CONNECTED</p>
+               <span style="width: 70px;" class="stayconnectedSpan"><i style="width:15px;border-radius:20px 10px;background-color: rgb(255, 255, 255);padding:10px 10px;"  class="fa-brands fa-facebook-f"></i></span>
+               <span style="width: 70px;"  class="stayconnectedSpan"><i  style="width:15px;border-radius:20px 10px;background-color: rgb(255, 255, 255);padding:10px 10px;" class="fa-brands fa-instagram"></i></span>
+               <span style="width: 70px;"  class="stayconnectedSpan"><i  style="width:18px;border-radius:20px 10px;background-color: rgb(255, 255, 255);padding:10px 10px;" class="fa-brands fa-youtube"></i></span>
+          </div>
+          <div class="iconContainer2">
+               <p class="stayconnectedP2">LIKE US ON FACEBOOK</p>
+          </div>
+     </div>
+     <div class="emailContainer">
+          <form>
+          <label style="display: block;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 16px;font-weight: bolder;" for="email">SIGN UP FOR OUR NEWSLETTER</label>
+          <input style="width: 50%;" type="email" id="email" name="email" required placeholder="enter your email address">
+          <input id="submitBtn" type="submit">
+          </form>
+     </div>
+
+     <div class="copyrightContainer">
+          © 2021 Giordano Myanmar All Rights Reserved. Ecommerce Software by GIO Tech Hub.
+     </div>
+</body>
+</html>
